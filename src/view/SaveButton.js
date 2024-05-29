@@ -1,4 +1,5 @@
 import React from 'react';
+import { setItem } from '../utils/store';
 
 const SaveButton = ({ nodes, edges }) => {
     const handleSave = () => {
@@ -10,6 +11,8 @@ const SaveButton = ({ nodes, edges }) => {
         if (invalidNodes.length > 1) {
             alert('More than one node has an empty target handle.');
         } else {
+            const prepData = { nodes : nodes, edges: edges }
+            setItem(prepData);
             alert('Flow saved successfully!');
         }
     };
