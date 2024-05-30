@@ -8,7 +8,7 @@ const SaveButton = ({ nodes, edges }) => {
             return connectedEdges.length === 0;
         });
 
-        if (invalidNodes.length > 1) {
+        if (invalidNodes.length > 0) {
             alert('More than one node has an empty target handle.');
         } else {
             const prepData = { nodes : nodes, edges: edges }
