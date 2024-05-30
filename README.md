@@ -1,70 +1,40 @@
-# Getting Started with Create React App
+##Components
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+1. FlowBuilder.js
+This is the main component that integrates all other components and manages the state of the flow.
 
-## Available Scripts
+State Management: Uses useState to manage nodes, edges, and the selected node.
+Node and Edge Changes: Utilizes applyNodeChanges and applyEdgeChanges from reactflow to handle node and edge updates.
+Node Selection: Allows users to select a node to view and edit its settings in the Settings Panel.
 
-In the project directory, you can run:
+2. NodesPanel.js
+A sidebar component that provides draggable node items.
 
-### `npm start`
+NodeItem Component: Simply make nodes draggable.
+Draggable Nodes: Currently supports a single type of node (Message) but can be extended to include other types.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+3. SettingsPanel.js
+A sidebar component that allows users to edit the properties of the selected node.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Text Editing: Provides an input field for editing the text content of a selected node.
+State Update: Updates the nodes' state with the new text content.
+4. SaveButton.js
+A button component to save the current flow and perform validation checks.
 
-### `npm test`
+Save Logic: Checks for incomplete nodes (nodes without edges) and displays an error if more than one such node is found.
+(data will be stored in localStorage)
+Flow Saving: Alerts the user that the flow has been saved successfully if no errors are found.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+********************************************Deployed*******************************************************
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+URL : https://chatbotbuilder.netlify.app/
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+********************************************Extensibility***************************************************
+The application is designed to be extensible:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Nodes Panel: Can be extended to include different types of nodes by adding more NodeItem components.
+Node Data: Can include more properties and different types of data for each node.
+Flow Validation: Can include more comprehensive checks and error handling during the save process.
