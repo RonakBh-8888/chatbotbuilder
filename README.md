@@ -18,6 +18,7 @@ A sidebar component that allows users to edit the properties of the selected nod
 
 Text Editing: Provides an input field for editing the text content of a selected node.
 State Update: Updates the nodes' state with the new text content.
+
 4. SaveButton.js
 A button component to save the current flow and perform validation checks.
 
@@ -27,12 +28,12 @@ Flow Saving: Alerts the user that the flow has been saved successfully if no err
 
 
 
-********************************************Deployed*******************************************************
+********************************************Deployed*********************************************
 
 URL : https://chatbotbuilder.netlify.app/
 
 
-********************************************Extensibility***************************************************
+********************************************Extensibility*****************************************
 The application is designed to be extensible:
 
 Nodes Panel: Can be extended to include different types of nodes by adding more NodeItem components.
