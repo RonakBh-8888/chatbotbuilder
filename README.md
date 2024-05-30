@@ -34,6 +34,7 @@ URL : https://chatbotbuilder.netlify.app/
 
 
 *************************************************Extensibility********************************************
+
 The application is designed to be extensible:
 
 Nodes Panel: Can be extended to include different types of nodes by adding more NodeItem components.
