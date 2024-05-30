@@ -1,4 +1,4 @@
-##Components
+****Components****
 
 1. FlowBuilder.js
 This is the main component that integrates all other components and manages the state of the flow.
