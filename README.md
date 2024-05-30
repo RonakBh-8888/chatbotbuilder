@@ -33,7 +33,7 @@ Flow Saving: Alerts the user that the flow has been saved successfully if no err
 URL : https://chatbotbuilder.netlify.app/
 
 
-***********************************************Extensibility********************************************
+********************************************Extensibility********************************************
 
 The application is designed to be extensible:
 
