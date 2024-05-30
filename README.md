@@ -28,12 +28,12 @@ Flow Saving: Alerts the user that the flow has been saved successfully if no err
 
 
 
-********************************************Deployed*********************************************
+***************************************************Deployed***************************************************
 
 URL : https://chatbotbuilder.netlify.app/
 
 
-********************************************Extensibility*****************************************
+*************************************************Extensibility********************************************
 The application is designed to be extensible:
 
 Nodes Panel: Can be extended to include different types of nodes by adding more NodeItem components.
